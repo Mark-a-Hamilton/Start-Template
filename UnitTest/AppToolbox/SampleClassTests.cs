@@ -9,7 +9,7 @@ public class SampleClassTests
 
     public SampleClassTests()
     {
-        _sut = new SampleClass(); // Create instance of Test 
+        _sut = new SampleClass(); // Create instance of Test class
     }
 
     [Fact]
