@@ -1,5 +1,6 @@
 using App.Models;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System.Diagnostics;
 
 namespace App.Controllers
