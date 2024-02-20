@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 
-namespace App.Toolbox
+namespace App.Toolbox;
+public class GblExceptionHandler : IExceptionHandler
 {
-    public class GblExceptionHandler : IExceptionHandler
+    public ValueTask<bool> TryHandleAsync(HttpContext httpContext, 
+        Exception exception, 
+        CancellationToken cancellationToken)
     {
-        public ValueTask<bool> TryHandleAsync(HttpContext httpContext, 
-            Exception exception, 
-            CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
     }
 }
