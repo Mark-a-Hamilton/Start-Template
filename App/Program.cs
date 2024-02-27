@@ -1,7 +1,10 @@
+using App.Toolbox;
 using OpenTelemetry.Metrics;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddExceptionHandler <GblExceptionHandler>();
 
 // Configure Serilog using appsettings.json
 Log.Logger = new LoggerConfiguration()
@@ -44,7 +47,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseExceptionHandler(_ => { });
 app.MapPrometheusScrapingEndpoint(); // Collect Telemetry
 app.UseSerilogRequestLogging(); // Add Request Logging
 app.UseHttpsRedirection();
