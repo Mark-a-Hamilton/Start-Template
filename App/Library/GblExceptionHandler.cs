@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Serilog;
+﻿namespace App.Library;
 
-namespace App.Toolbox;
 public class GblExceptionHandler : IExceptionHandler
 {
     public ValueTask<bool> TryHandleAsync(HttpContext c, 

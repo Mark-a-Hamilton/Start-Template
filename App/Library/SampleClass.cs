@@ -1,12 +1,13 @@
-﻿namespace App.Toolbox;
+﻿namespace App.Library;
 
 public class SampleClass
 {
     public string SampleMethod(int input)
     {
-        return (input == 1) ? "OK!" : "Failed";
+        return input == 1 ? "OK!" : "Failed";
     }
-    public int SampleMethod(int first, int second) {
+    public int SampleMethod(int first, int second)
+    {
         return first + second;
     }
 }

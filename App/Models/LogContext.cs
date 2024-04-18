@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace App.Models;
+﻿namespace App.Models;
 
 public class LogContext : DbContext
 {

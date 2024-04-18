@@ -1,9 +1,3 @@
-using App.Models;
-using App.Toolbox;
-using Microsoft.EntityFrameworkCore;
-using OpenTelemetry.Metrics;
-using Serilog;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var log = builder.Configuration.GetValue<string>("Serilog:WriteTo:0:Args:connectionString");  // Get Serilog Connection String

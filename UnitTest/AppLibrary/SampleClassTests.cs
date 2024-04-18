@@ -1,6 +1,3 @@
-using System.Configuration;
-using System.Runtime.ExceptionServices;
-
 namespace UT.App;
 
 public class SampleClassTests
